@@ -10,7 +10,13 @@ const Users = () => {
     }
 
     const renderPhrase = (number) => {
-        return number.length > 0 ? <h1>{number.length} человек тусанет с тобой сегодня</h1> : <h1>Никто не тусанет с тобой сегодня</h1>
+        if (number.length > 1 && number.length < 5) {
+            return <h1>{number.length} человека тусанут с тобой сегодня</h1>
+        } else if (number.length > 0) {
+            return <h1>{number.length} человек тусанёт с тобой сегодня</h1>
+        } else {
+            return <h1>Никто с тобой не тусанёт</h1>
+        }
     }
 
     return  <>
