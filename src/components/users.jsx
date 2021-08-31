@@ -60,11 +60,10 @@ const Users = () => {
                             </button>
                         </td>
                     </tr>
-                );
+                )
             })}
             </tbody>
         </table>
-        ;
     </>
 }
 
